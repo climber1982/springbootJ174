@@ -81,7 +81,7 @@
             </plugin>
         </plugins>
         <defaultGoal>compile</defaultGoal>
-        <!-- 配置java版本 不配置的话默认父类配置的是1.6-->
+        <!-- 配置java版本 不配置的话默认父类配置的是1.6
         <pluginManagement>
             <plugins>
                 <plugin>
@@ -109,7 +109,7 @@
 
             </plugins>
         </pluginManagement>
-
+-->
 
 
     </build>
