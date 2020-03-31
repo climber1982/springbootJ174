@@ -4,6 +4,10 @@
     <groupId>lovo</groupId>
     <artifactId>sprinbootJ174</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>springbootS</module>
+        <module>SSOService</module>
+    </modules>
     <name>sprinbootJ174</name>
     <!-- <packaging>jar</packaging> -->
     <packaging>pom</packaging>
