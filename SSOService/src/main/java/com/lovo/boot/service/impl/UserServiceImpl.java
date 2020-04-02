@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 @Service(value = "userService")
 public class UserServiceImpl implements IUserService {
    @Autowired
@@ -14,5 +16,10 @@ public class UserServiceImpl implements IUserService {
     @Transactional(rollbackFor = {Exception.class})
     public void savaUser(UserEntity userEntity) {
         userDao.save(userEntity);
+    }
+
+    @Override
+    public List<UserEntity> findUserList() {
+        return (List<UserEntity>) userDao.findAll();
     }
 }

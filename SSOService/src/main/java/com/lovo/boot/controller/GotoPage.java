@@ -18,4 +18,9 @@ public class GotoPage {
         return  mv;
     }
 
+    @RequestMapping("gotoAddUser")
+    public String gotoAddUser(){
+        return "andPage";
+    }
+
 }
