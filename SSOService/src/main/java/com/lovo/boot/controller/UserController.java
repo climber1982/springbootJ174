@@ -32,4 +32,6 @@ public class UserController {
     public String loginUser(String userName, String password){
     return userName+"登录成功";
     }
+
+    
 }
