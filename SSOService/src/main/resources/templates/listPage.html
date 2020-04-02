@@ -7,5 +7,10 @@
 <body>
      <span th:text="${user.userName}"></span><p/>
      <input th:value="${user.password}"></input>
+
+    <div th:object="${user}">
+        <span th:text="*{userName}"></span><p/>
+        <input th:value="*{password}"></input>
+    </div>
 </body>
 </html>
