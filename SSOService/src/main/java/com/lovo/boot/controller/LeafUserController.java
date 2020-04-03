@@ -24,6 +24,33 @@ public class LeafUserController {
        mv.setView(rv);
        return mv;
     }
+    //修改
+    @RequestMapping("updateUserInfo")
+    public ModelAndView updateUserInfo(String userName, String password,int userId){
+        ModelAndView mv=new ModelAndView();
+        UserEntity user=new UserEntity();
+        user.setUserId(userId);
+        user.setUserName(userName);
+        user.setPassword(password);
+        userService.savaUser(user);
+        //重定向到查询controller
+        RedirectView rv=new RedirectView("findUserListInfo");
+        mv.setView(rv);
+        return mv;
+    }
+
+    //删除
+    @RequestMapping("delUser")
+    public ModelAndView delUser(int userId){
+        ModelAndView mv=new ModelAndView();
+        //删除
+        userService.delUserById(userId);
+        //重定向到查询controller
+        RedirectView rv=new RedirectView("findUserListInfo");
+        mv.setView(rv);
+        return mv;
+    }
+
     //查询所有用户
     @RequestMapping("findUserListInfo")
     public ModelAndView findUserListInfo(){

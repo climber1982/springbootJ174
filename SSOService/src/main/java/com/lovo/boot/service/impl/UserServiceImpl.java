@@ -22,4 +22,14 @@ public class UserServiceImpl implements IUserService {
     public List<UserEntity> findUserList() {
         return (List<UserEntity>) userDao.findAll();
     }
+
+    @Override
+    public UserEntity getUserEntityById(int id) {
+        return userDao.findById(id).get();
+    }
+
+    @Override
+    public void delUserById(int id) {
+        userDao.deleteById(id);
+    }
 }

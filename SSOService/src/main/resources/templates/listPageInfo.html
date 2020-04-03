@@ -11,11 +11,16 @@
                 <td>序号</td>
                 <td>名字</td>
                 <td>密码</td>
+                <td>操作</td>
             </tr>
             <tr th:each="user,uk:${userList}">
                 <td th:text="${uk.index}"></td>
                 <td th:text="${user.userName}"></td>
                 <td th:text="${user.password}"></td>
+                <td>
+                  <a th:href="@{/gotoUpdate(userId=${user.userId})}">修改</a>/
+                  <a th:href="@{/delUser(userId=${user.userId})}">删除</a>
+                </td>
             </tr>
         </table>
    </div>
